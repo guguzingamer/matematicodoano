@@ -1,13 +1,13 @@
 /* --------------- @IMPORT --------------- */
 
-@import url("/css/fonts.css");
+@import url("css/fonts.css");
 
-@import url("/css/themes/light.css");
-@import url("/css/themes/dark.css");
+@import url("css/themes/light.css");
+@import url("css/themes/dark.css");
 
 @import url("css/components/header.css");
-@import url("/css/main.css");
+@import url("css/main.css");
 @import url("css/components/footer.css");
 
-@import url("/css/generic.css");
-@import url("/css/layout.css");
+@import url("css/generic.css");
+@import url("css/layout.css");
