@@ -23,6 +23,6 @@
     --cnv-axis: #000000;
 
     main {
-        background-image: url("/assets/texture_lt.png");
+        background-image: url("./assets/texture_lt.png");
     }
 }
