@@ -5,7 +5,7 @@
     span {
         font-size: clamp(32px, 6vw, 64px);
     }
-    i {
+    li {
         font-size: clamp(16px, 6vw, 32px);
     }
 }
