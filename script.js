@@ -15,7 +15,7 @@ const customScripts = document.querySelectorAll("custom-script")
 
 customScripts.forEach(el => {
     const source = el.getAttribute("src")
-    const nSource = source.replace("./js/", "")
+    const nSource = source.replace(/^\.?\/?js\//, "")
 
     scriptsToLoad.splice(3, 0, nSource)
 })
