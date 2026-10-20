@@ -1,20 +1,20 @@
 .scale {
     h2 {
-        font-size: 96px;
+        font-size: clamp(64px, 6vw, 96px);
     }
     span {
-        font-size: 64px;
+        font-size: clamp(32px, 6vw, 64px);
     }
     i {
-        font-size: 32px;
+        font-size: clamp(16px, 6vw, 32px);
     }
 }
 
 #words {
-  display: flex;
-  gap: 60px;
-  flex-wrap: wrap;
-  justify-content: center;
+    display: flex;
+    gap: 20px 60px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #rene h2 {
@@ -23,9 +23,12 @@
 }
 
 #scrolling-container {
+    --line-height: clamp(32px, 6vw, 64px);
+
+    height: var(--line-height);
+
     width: 100%;
-    overflow-y: hidden;
-    max-height: 72px;
+    overflow: hidden;
     span strong {
         line-height: 1;
         animation: go-up 4.5s infinite ease-in-out;
@@ -41,13 +44,16 @@
     0%, 25% {
         transform: translateY(0);
     }
+
     33%, 58% {
-        transform: translateY(-64px);
+        transform: translateY(calc(-1 * var(--line-height)));
     }
+
     66%, 91% {
-        transform: translateY(-128px);
+        transform: translateY(calc(-2 * var(--line-height)));
     }
+
     100% {
-        transform: translateY(-192px);
+        transform: translateY(calc(-3 * var(--line-height)));
     }
 }
