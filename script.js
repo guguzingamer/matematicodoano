@@ -66,7 +66,7 @@ async function loadScript(path) {
 
 async function loadAllScripts() {
 	for (const src of scriptsToLoad) {
-		await loadScript("/js/" + src)
+		await loadScript("matematicodoano/js/" + src)
 	}
 }
 
