@@ -1,0 +1,1 @@
+Vazio igual a minha carteira cara, trabalho não remunerado é uma b0sta
