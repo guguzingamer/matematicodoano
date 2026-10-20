@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    width: 100%;
+    min-height: 100dvh;
+    display: grid;
+    align-items: start;
+
+    grid-template-rows: auto minmax(0, 2fr) auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+header {
+    grid-area: header;
+    min-height: 8dvh;
+    position: sticky;
+    z-index: 10;
+    top: 0;
+}
+
+main {
+    grid-area: main;
+    min-height: 84dvh;
+}
+
+footer {
+    min-height: 8dvh;
+    grid-area: footer;
+}

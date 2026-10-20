@@ -1,0 +1,28 @@
+:root[data-theme="dark"] {
+    --bg-side: linear-gradient(90deg, var(--bg-c1) 0%, rgb(15, 15, 15) 50%, var(--bg-c2) 100%);
+
+    --bg: rgb(30, 30, 35);
+    --bg2: rgb(45, 45, 50);
+    --bg-hover: rgb(15, 15, 15);
+    --bg-c1: rgb(30, 30, 0);
+    --bg-c2: rgb(30, 10, 0);
+
+    --bg-hc1: rgb(100, 85, 0);
+    --bg-hc2: rgb(80, 25, 0);
+
+    --bd: rgb(70, 70, 70);
+
+    --txt-standard: rgb(240, 240, 240);
+    --txt-colored: rgb(240, 215, 125);
+    --txt-c1: rgb(255, 255, 0);
+    --txt-c2: rgb(135, 35, 0);
+    --txt-link: rgb(50, 100, 200);
+
+    --cnv-grid: rgb(100, 100, 100);
+    --cnv-point: yellow;
+    --cnv-axis: #ffffff;
+
+    main {
+        background-image: url("/assets/texture_dt.png");
+    }
+}

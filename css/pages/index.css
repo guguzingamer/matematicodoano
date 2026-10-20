@@ -1,0 +1,53 @@
+.scale {
+    h2 {
+        font-size: 96px;
+    }
+    span {
+        font-size: 64px;
+    }
+    i {
+        font-size: 32px;
+    }
+}
+
+#words {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#rene h2 {
+    color: var(--txt-standard);
+    text-decoration: none;
+}
+
+#scrolling-container {
+    width: 100%;
+    overflow-y: hidden;
+    max-height: 72px;
+    span strong {
+        line-height: 1;
+        animation: go-up 4.5s infinite ease-in-out;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(90deg, var(--txt-c1), var(--txt-c2));
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+@keyframes go-up {
+    0%, 25% {
+        transform: translateY(0);
+    }
+    33%, 58% {
+        transform: translateY(-64px);
+    }
+    66%, 91% {
+        transform: translateY(-128px);
+    }
+    100% {
+        transform: translateY(-192px);
+    }
+}

@@ -1,0 +1,32 @@
+html body {
+    color: var(--txt-standard);
+}
+
+.loading-bar {
+    height: 4px;
+    width: 100%;
+    position: fixed;
+    margin: 0; border-radius: 0;
+    padding: 0;
+    top: 0;
+    z-index: 100;
+    transition: opacity .15s ease;
+}
+
+a {
+    color: var(--txt-link);
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.loading-bar.is-complete {
+    opacity: 0;
+}
+
+.highlight {
+    padding: 10px;
+    background: var(--bg2);
+    border: 2px solid var(--bd);
+}

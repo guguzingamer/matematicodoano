@@ -1,0 +1,28 @@
+:root {
+    --bg-side: linear-gradient(90deg, var(--bg-c1) 0%, white 15%, white 85%, var(--bg-c2) 100%);
+
+    --bg: rgb(255, 255, 255);
+    --bg2: rgb(230, 235, 240);
+    --bg-hover: rgb(170, 175, 180);
+    --bg-c1: rgb(255, 200, 200);
+    --bg-c2: rgb(200, 200, 255);
+
+    --bg-hc1: rgb(255, 200, 200);
+    --bg-hc2: rgb(200, 200, 255);
+
+    --bd: rgb(190, 190, 190);
+
+    --txt-standard: #000000;
+    --txt-colored: rgb(50, 0, 60);
+    --txt-c1: rgb(150, 0, 0);
+    --txt-c2: rgb(0, 0, 150);
+    --txt-link: rgb(50, 100, 200);
+
+    --cnv-grid: rgb(155, 155, 155);
+    --cnv-point: rebeccapurple;
+    --cnv-axis: #000000;
+
+    main {
+        background-image: url("/assets/texture_lt.png");
+    }
+}

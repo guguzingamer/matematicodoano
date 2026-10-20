@@ -1,0 +1,15 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background: var(--bg-side);
+    border-top: 1px solid var(--bd);
+
+    p:first-child {
+        margin-left: 20px;
+    }
+    p:last-child {
+        margin-right: 20px;
+    }
+}
