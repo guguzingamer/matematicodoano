@@ -15,9 +15,5 @@ main {
                 margin-right: 10px;
             }
         }
-        
-        img {
-            object-fit: cover;
-        }
     }
 }
