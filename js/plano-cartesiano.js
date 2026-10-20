@@ -19,13 +19,12 @@ export function init() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const ponto = { x: 2, y: 3 };
+    const ponto = { x: 0, y: 0 };
     const estado = {
         largura: canvas.width,
         altura: canvas.height,
         escala: 40,
-        origem: { x: canvas.width / 2, y: canvas.height / 2 },
-        arrastando: false
+        origem: { x: canvas.width / 2, y: canvas.height / 2 }
     };
     const raioPonto = 8;
 
@@ -175,44 +174,21 @@ export function init() {
         return { x: evento.clientX - rect.left, y: evento.clientY - rect.top };
     }
 
-    function pontoFoiSelecionado(posicao) {
-        const pontoNaTela = coordenadaParaTela(ponto.x, ponto.y);
-        return Math.hypot(posicao.x - pontoNaTela.x, posicao.y - pontoNaTela.y) <= raioPonto + 8;
-    }
-
-    function iniciarArraste(evento) {
-        if (!pontoFoiSelecionado(obterPosicao(evento))) return;
-        estado.arrastando = true;
-        canvas.setPointerCapture?.(evento.pointerId);
-        canvas.style.cursor = 'grabbing';
-        evento.preventDefault();
-    }
-
-    function moverPonto(evento) {
-        if (!estado.arrastando) return;
+    function posicionarPonto(evento) {
         const posicao = obterPosicao(evento);
         const coordenada = telaParaCoordenada(posicao.x, posicao.y);
+
         ponto.x = Math.round(coordenada.x);
         ponto.y = Math.round(coordenada.y);
         desenhar();
         evento.preventDefault();
     }
 
-    function finalizarArraste(evento) {
-        if (!estado.arrastando) return;
-        estado.arrastando = false;
-        canvas.releasePointerCapture?.(evento.pointerId);
-        canvas.style.cursor = 'grab';
-    }
-
-
     atualizarTamanho();
     desenhar();
-    canvas.style.cursor = 'grab';
-    canvas.addEventListener('pointerdown', iniciarArraste);
-    canvas.addEventListener('pointermove', moverPonto);
-    canvas.addEventListener('pointerup', finalizarArraste);
-    canvas.addEventListener('pointercancel', finalizarArraste);
+    canvas.style.cursor = 'pointer';
+    canvas.style.touchAction = 'manipulation';
+    canvas.addEventListener('pointerdown', posicionarPonto);
     window.addEventListener('resize', () => {
         atualizarTamanho();
         desenhar();
